@@ -52,7 +52,6 @@ class ProductCardBox extends React.Component {
   }
 
   componentDidUpdate(previousProps, previousState) {
-    console.log(previousProps);
     if (previousProps !== this.props) {
       const currentCategoryData = this.context[this.props.currentCategory];
       const currentSubCategory = currentCategoryData

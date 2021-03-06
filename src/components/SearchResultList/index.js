@@ -73,7 +73,6 @@ class SearchResultList extends React.Component {
 
   returnListItems = (category, subCategory, query) => {
     query = query.toLowerCase();
-    console.log("query==", query);
 
     const searchRegion = this.returnSearchRegion(category, subCategory);
     return searchRegion.filter(

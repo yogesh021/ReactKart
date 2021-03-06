@@ -50,12 +50,9 @@ class CartPage extends React.Component {
   returnCartData = () => {
     const data = JSON.parse(localStorage.getItem("cart"));
     const allData = this.context;
-    console.log("context data ===", allData);
+
     const res = [];
     for (let i = 0; i < data.length; i++) {
-      console.log("data", data);
-      console.log(i, data[i].product_category);
-      console.log("category: ", allData[data[i].product_category]);
       const item = allData[data[i].product_category].find(
         (item) => item.product_id == data[i].product_id
       );
@@ -64,7 +61,7 @@ class CartPage extends React.Component {
         res.push(item);
       }
     }
-    console.log("res = ", res);
+
     return res;
   };
 
@@ -87,7 +84,7 @@ class CartPage extends React.Component {
     this.state.cartData.forEach(
       (item) => (price += item.quantity * item.product_price)
     );
-    console.log("price", price);
+
     return price;
   };
 
@@ -107,7 +104,7 @@ class CartPage extends React.Component {
   componentDidMount() {
     window.addEventListener("resize", this.updateDimensions);
     const cartData = this.returnCartData();
-    console.log("cart data", cartData);
+
     this.setState({ cartData });
   }
 
