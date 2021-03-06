@@ -143,11 +143,13 @@ class DescriptionPage extends React.Component {
                 </div>
               </CardActions>
 
-              <AddToCartButton
-                product_category={category}
-                product_id={id}
-                quantity={this.state.productQuantity}
-              />
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                <AddToCartButton
+                  product_category={category}
+                  product_id={id}
+                  quantity={this.state.productQuantity}
+                />
+              </div>
             </Card>
           </Grid>
         </Grid>

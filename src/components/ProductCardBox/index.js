@@ -20,7 +20,7 @@ const styles = (theme) => ({
   },
   link: {
     backgroundColor: "#1976d2",
-    height: "40px",
+    height: "20px",
     verticalAlign: "center",
     color: "white",
     padding: "10px",
@@ -108,13 +108,15 @@ class ProductCardBox extends React.Component {
               ) : null;
             })}
           </Grid>
-          <Link
-            to={`/detail/${currentCategory}/${currentSubCategory}`}
-            className={classes.link}
-            style={{ textDecoration: "none" }}
-          >
-            See More
-          </Link>
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <Link
+              to={`/detail/${currentCategory}/${currentSubCategory}`}
+              className={classes.link}
+              style={{ textDecoration: "none" }}
+            >
+              See More
+            </Link>
+          </div>
         </div>
       </Container>
     );

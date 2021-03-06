@@ -23,7 +23,7 @@ const styles = {
   },
   link: {
     backgroundColor: "#16c79a",
-    height: "40px",
+    height: "20px",
     verticalAlign: "center",
     color: "white",
     padding: "10px",
@@ -62,17 +62,17 @@ function ProductCard(props) {
           style={{ cursor: "default" }}
         />
         <CardContent>
-          <h5
+          <h3
             onClick={() =>
               history.push(
                 `/detail/${productCategory}/${productSubCategory}/${productId}`
               )
             }
             gutterBottom
-            style={{ color: "black", fontWeight: "400" }}
+            style={{ color: "black", fontWeight: "600" }}
           >
             {returnProductName(productData.product_name)}
-          </h5>
+          </h3>
           <div style={{ display: "flex" }}>
             <Chip
               size="small"

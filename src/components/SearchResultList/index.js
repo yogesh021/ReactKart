@@ -110,7 +110,7 @@ class SearchResultList extends React.Component {
                   }}
                   onClick={() =>
                     history.push(
-                      `/detail/${category}/${sub_category}/${item.product_id}`
+                      `/detail/${item.product_category}/${item.product_sub_category}/${item.product_id}`
                     )
                   }
                 >
